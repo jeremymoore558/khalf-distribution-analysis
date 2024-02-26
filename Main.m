@@ -6,24 +6,11 @@
 
 clear all;
 close all;
-% dataparms = datasets_ShortSat();
-% dataparms = datasets();
-dataparms = datasets_ForPublication();
+dataparms = datasets();
 
-for ii = [16]%length(dataparms)
-%     dataparms = dataparms(i);
+for ii = 1:length(dataparms)
     analyzeSensitivityDistribution(dataparms(ii));
 end
 
-%% Get nCells from a dataset
-dataparms = datasets_ForPublication();
-addpath('./Functions')
-addpath('./Data')
-addpath('./Outputs')
-ii = 17;
-Files = dataparms(ii).Files;
-concLevels = dataparms(ii).concLevels;
-EfretData = combineFretFiles(Files, concLevels); %Combine files into one dataset
-disp(length(EfretData))
 
 
