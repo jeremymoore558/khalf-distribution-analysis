@@ -15,7 +15,7 @@ which contains several fields:
 * Hillp0 = (float) (log(n), log(K)); 'vector containing initial parameters for fitting hill function'
 * Normp0 = (float) (log(mu), log(sigma)); 'vector containing initial parameters for fitting lognormal CDF'
 The 'dataparms' parameters must be set for each experiment. Multiple datasets can be stored as different numbered entries 
-in the dataparms struct. 
+in the dataparms struct. A default struct which organizes all the data used in the paper is provided in 'datasets.m'
 
 There is also a required file of general 
 analysis parameter called 'parameters.m' containing parameters that should be kept the same for all experiments.
